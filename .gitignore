@@ -1,0 +1,10 @@
+bin/
+obj/
+.idea/
+.vs/
+*.user
+*.suo
+_backup_before_simplify/
+*.backup*
+Конспект*
+GaLab/tar-metod-upd-v3.pdf

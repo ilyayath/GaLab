@@ -1,0 +1,138 @@
+{
+  // Великий набір: велика IT-конференція, 12 треків, доповідачі виступають у кількох треках.
+  // Час пленарних сесій зафіксовано організаторами ("slots"): відкриття - перший слот першого дня, пленарна другого дня - його перший слот,
+  // закриття - передостанній слот останнього дня. "tracks": ["Усі"] означає всі треки конференції.
+  "name": "L — велика IT-конференція",
+  "description": "12 треків (1405 учасників), 3 дні × 6 слотів, 10 зал, лише 3 воркшоп-зали. Доповідачі виступають у кількох треках і панелях (щільний набір).",
+  "days": ["День 1", "День 2", "День 3"],
+  "slotsPerDay": 6,
+  "slotTimes": ["09:30", "11:00", "12:30", "14:30", "16:00", "17:30"],
+  "maxSessionsPerDay": 4,
+  "halls": [
+    { "name": "Головна зала",   "capacity": 1500, "type": "Головна зала" },
+    { "name": "Зала A",         "capacity": 250,  "type": "Секційна зала" },
+    { "name": "Зала B",         "capacity": 200,  "type": "Секційна зала" },
+    { "name": "Зала C",         "capacity": 160,  "type": "Секційна зала" },
+    { "name": "Зала D",         "capacity": 140,  "type": "Секційна зала" },
+    { "name": "Зала E",         "capacity": 120,  "type": "Секційна зала" },
+    { "name": "Зала F",         "capacity": 100,  "type": "Секційна зала" },
+    { "name": "Воркшоп-зала 1", "capacity": 40,   "type": "Воркшоп-зала" },
+    { "name": "Воркшоп-зала 2", "capacity": 35,   "type": "Воркшоп-зала" },
+    { "name": "Воркшоп-зала 3", "capacity": 30,   "type": "Воркшоп-зала" }
+  ],
+  "hallTypes": {
+    "Пленарна": ["Головна зала"],
+    "Панель":   ["Головна зала", "Секційна зала"],
+    "Доповідь": ["Секційна зала", "Головна зала"],
+    "Воркшоп":  ["Воркшоп-зала"]
+  },
+  "tracks": [
+    { "name": "AI/ML",    "size": 220 },
+    { "name": "Data",     "size": 130 },
+    { "name": "Backend",  "size": 180 },
+    { "name": "Frontend", "size": 150 },
+    { "name": "Mobile",   "size": 100 },
+    { "name": "DevOps",   "size": 120 },
+    { "name": "Cloud",    "size": 95 },
+    { "name": "Security", "size": 90 },
+    { "name": "QA",       "size": 80 },
+    { "name": "GameDev",  "size": 70 },
+    { "name": "Product",  "size": 110 },
+    { "name": "Embedded", "size": 60 }
+  ],
+  "sessions": [
+    { "title": "Відкриття: десятиліття ШІ в українському IT",  "type": "Пленарна", "tracks": ["Усі"], "speaker": "Литвиненко Г.О.", "slots": ["День 1:1"] },
+    { "title": "Інженер майбутнього: навички 2030",            "type": "Пленарна", "tracks": ["Усі"], "speaker": "Захарченко Р.С.", "slots": ["День 2:1"] },
+    { "title": "Закриття: open source як спільна інфраструктура", "type": "Пленарна", "tracks": ["Усі"], "speaker": "Мельничук Л.В.", "slots": ["День 3:5"] },
+
+    { "title": "LLM у продакшені: досвід команд",              "type": "Панель", "tracks": ["AI/ML", "Data"],           "speaker": "Бережна К.Д." },
+    { "title": "Кросплатформа чи нативна розробка?",           "type": "Панель", "tracks": ["Frontend", "Mobile", "GameDev"],         "speaker": "Лук'яненко С.А." },
+    { "title": "Kubernetes скрізь — це нормально?",            "type": "Панель", "tracks": ["Backend", "DevOps", "Cloud"], "speaker": "Павлюк О.І." },
+    { "title": "Безпека ланцюга постачання ПЗ",                "type": "Панель", "tracks": ["Security", "Embedded", "Cloud"],        "speaker": "Романюк С.В." },
+    { "title": "Хто відповідає за якість продукту?",           "type": "Панель", "tracks": ["QA", "Product", "Frontend"],        "speaker": "Марченко Н.Р." },
+
+    { "title": "LLM-агенти: архітектура і обмеження",          "type": "Доповідь", "tracks": ["AI/ML"], "speaker": "Бережна К.Д." },
+    { "title": "RAG: пошук і генерація на практиці",           "type": "Доповідь", "tracks": ["AI/ML"], "speaker": "Бережна К.Д." },
+    { "title": "MLOps: від ноутбука до продакшену",            "type": "Доповідь", "tracks": ["AI/ML"], "speaker": "Гуменюк П.А." },
+    { "title": "Комп'ютерний зір на edge-пристроях",           "type": "Доповідь", "tracks": ["AI/ML"], "speaker": "Тимошенко В.Г." },
+    { "title": "Оцінювання якості LLM",                        "type": "Доповідь", "tracks": ["AI/ML"], "speaker": "Сорока І.М." },
+    { "title": "Fine-tuning малих мовних моделей",             "type": "Воркшоп",  "tracks": ["AI/ML"], "speaker": "Гуменюк П.А.", "attendees": 35 },
+
+    { "title": "Lakehouse: Delta чи Iceberg",                  "type": "Доповідь", "tracks": ["Data"], "speaker": "Онищенко Д.С." },
+    { "title": "Стрімінг даних з Kafka",                       "type": "Доповідь", "tracks": ["Data"], "speaker": "Онищенко Д.С." },
+    { "title": "Якість даних і контракти даних",               "type": "Доповідь", "tracks": ["Data"], "speaker": "Федорук Ю.М." },
+    { "title": "Оркестрація пайплайнів",                       "type": "Доповідь", "tracks": ["Data"], "speaker": "Федорук Ю.М." },
+    { "title": "Векторні бази даних",                          "type": "Доповідь", "tracks": ["Data"], "speaker": "Тимошенко В.Г." },
+    { "title": "dbt за дві години",                            "type": "Воркшоп",  "tracks": ["Data"], "speaker": "Федорук Ю.М.", "attendees": 30 },
+
+    { "title": "Domain-Driven Design без догм",                "type": "Доповідь", "tracks": ["Backend"], "speaker": "Семенюк А.О." },
+    { "title": "Event sourcing у фінтеху",                     "type": "Доповідь", "tracks": ["Backend"], "speaker": "Семенюк А.О." },
+    { "title": "Go проти Rust для мікросервісів",              "type": "Доповідь", "tracks": ["Backend"], "speaker": "Кириленко Б.Т." },
+    { "title": "Спостережуваність: логи, метрики, трейси",     "type": "Доповідь", "tracks": ["Backend"], "speaker": "Кириленко Б.Т." },
+    { "title": "Кешування у високонавантажених системах",      "type": "Доповідь", "tracks": ["Backend"], "speaker": "Ткачук Р.В." },
+    { "title": "Пишемо gRPC-сервіс на Go",                     "type": "Воркшоп",  "tracks": ["Backend"], "speaker": "Кириленко Б.Т.", "attendees": 30 },
+
+    { "title": "React Server Components",                      "type": "Доповідь", "tracks": ["Frontend"], "speaker": "Лук'яненко С.А." },
+    { "title": "Core Web Vitals на практиці",                  "type": "Доповідь", "tracks": ["Frontend"], "speaker": "Лук'яненко С.А." },
+    { "title": "Доступність вебзастосунків",                   "type": "Доповідь", "tracks": ["Frontend"], "speaker": "Гаврилюк А.Ю." },
+    { "title": "TypeScript для великих команд",                "type": "Доповідь", "tracks": ["Frontend"], "speaker": "Дячук М.Б." },
+    { "title": "Мікрофронтенди: коли це виправдано",           "type": "Доповідь", "tracks": ["Frontend"], "speaker": "Ярема О.П." },
+    { "title": "Тестування UI з Playwright",                   "type": "Воркшоп",  "tracks": ["Frontend"], "speaker": "Дячук М.Б.", "attendees": 25 },
+
+    { "title": "Kotlin Multiplatform у продакшені",            "type": "Доповідь", "tracks": ["Mobile"], "speaker": "Головко Т.І." },
+    { "title": "Офлайн-режим і синхронізація даних",           "type": "Доповідь", "tracks": ["Mobile"], "speaker": "Головко Т.І." },
+    { "title": "SwiftUI: архітектура застосунку",              "type": "Доповідь", "tracks": ["Mobile"], "speaker": "Бондар І.С." },
+    { "title": "Доступність мобільних застосунків",            "type": "Доповідь", "tracks": ["Mobile"], "speaker": "Олійник В.С." },
+    { "title": "Релізи в магазини застосунків без болю",       "type": "Доповідь", "tracks": ["Mobile"], "speaker": "Олійник В.С." },
+    { "title": "Flutter: перший застосунок за 90 хвилин",      "type": "Воркшоп",  "tracks": ["Mobile"], "speaker": "Бондар І.С.", "attendees": 25 },
+
+    { "title": "Kubernetes-оператори своїми руками",           "type": "Доповідь", "tracks": ["DevOps"], "speaker": "Павлюк О.І." },
+    { "title": "GitOps з Argo CD",                             "type": "Доповідь", "tracks": ["DevOps"], "speaker": "Павлюк О.І." },
+    { "title": "Platform engineering",                         "type": "Доповідь", "tracks": ["DevOps"], "speaker": "Ковальчишин Т.Л." },
+    { "title": "Zero-downtime деплой",                         "type": "Доповідь", "tracks": ["DevOps"], "speaker": "Ковальчишин Т.Л." },
+    { "title": "CI/CD для монорепозиторіїв",                   "type": "Доповідь", "tracks": ["DevOps"], "speaker": "Ткачук Р.В." },
+    { "title": "Terraform: інфраструктура як код",             "type": "Воркшоп",  "tracks": ["DevOps"], "speaker": "Павлюк О.І.", "attendees": 40 },
+
+    { "title": "Serverless: коли так, а коли ні",              "type": "Доповідь", "tracks": ["Cloud"], "speaker": "Бойчук Є.О." },
+    { "title": "Мультихмарна архітектура",                     "type": "Доповідь", "tracks": ["Cloud"], "speaker": "Бойчук Є.О." },
+    { "title": "Міграція баз даних у хмару без простою",       "type": "Доповідь", "tracks": ["Cloud"], "speaker": "Харченко Л.М." },
+    { "title": "FinOps на практиці",                           "type": "Доповідь", "tracks": ["Cloud"], "speaker": "Харченко Л.М." },
+    { "title": "Landing zone для стартапу",                    "type": "Доповідь", "tracks": ["Cloud"], "speaker": "Ковальчишин Т.Л." },
+    { "title": "Інфраструктура в коді з AWS CDK",              "type": "Воркшоп",  "tracks": ["Cloud"], "speaker": "Харченко Л.М.", "attendees": 30 },
+
+    { "title": "Моделювання загроз",                           "type": "Доповідь", "tracks": ["Security"], "speaker": "Романюк С.В." },
+    { "title": "Безпека LLM-застосунків: prompt injection",    "type": "Доповідь", "tracks": ["Security"], "speaker": "Романюк С.В." },
+    { "title": "Секрети в CI/CD",                              "type": "Доповідь", "tracks": ["Security"], "speaker": "Романюк С.В." },
+    { "title": "OWASP Top 10 сьогодні",                        "type": "Доповідь", "tracks": ["Security"], "speaker": "Сидоренко Є.А." },
+    { "title": "Розслідування інцидентів",                     "type": "Доповідь", "tracks": ["Security"], "speaker": "Сидоренко Є.А." },
+    { "title": "CTF для початківців",                          "type": "Воркшоп",  "tracks": ["Security"], "speaker": "Сидоренко Є.А.", "attendees": 30 },
+
+    { "title": "Тестова піраміда в мікросервісах",             "type": "Доповідь", "tracks": ["QA"], "speaker": "Марченко Н.Р." },
+    { "title": "Контрактне тестування",                        "type": "Доповідь", "tracks": ["QA"], "speaker": "Марченко Н.Р." },
+    { "title": "Тестування ML-систем",                         "type": "Доповідь", "tracks": ["QA"], "speaker": "Марченко Н.Р." },
+    { "title": "Перформанс-тестування з k6",                   "type": "Доповідь", "tracks": ["QA"], "speaker": "Грищенко Л.П." },
+    { "title": "Мутаційне тестування",                         "type": "Доповідь", "tracks": ["QA"], "speaker": "Грищенко Л.П." },
+    { "title": "Автотести API на Playwright",                  "type": "Воркшоп",  "tracks": ["QA"], "speaker": "Грищенко Л.П.", "attendees": 20 },
+
+    { "title": "Unreal Engine 5: оптимізація сцен",            "type": "Доповідь", "tracks": ["GameDev"], "speaker": "Кучер Д.В." },
+    { "title": "Мультиплеєр без лагів",                        "type": "Доповідь", "tracks": ["GameDev"], "speaker": "Кучер Д.В." },
+    { "title": "Геймдизайн і метрики утримання",               "type": "Доповідь", "tracks": ["GameDev"], "speaker": "Левицька Х.Р." },
+    { "title": "Процедурна генерація світів",                  "type": "Доповідь", "tracks": ["GameDev"], "speaker": "Левицька Х.Р." },
+    { "title": "ШІ для неігрових персонажів",                  "type": "Доповідь", "tracks": ["GameDev"], "speaker": "Сорока І.М." },
+    { "title": "Шейдери для початківців",                      "type": "Воркшоп",  "tracks": ["GameDev"], "speaker": "Левицька Х.Р.", "attendees": 25 },
+
+    { "title": "Продуктові метрики, що мають значення",        "type": "Доповідь", "tracks": ["Product"], "speaker": "Демчук О.А." },
+    { "title": "Discovery без бюрократії",                     "type": "Доповідь", "tracks": ["Product"], "speaker": "Демчук О.А." },
+    { "title": "Ціноутворення SaaS",                           "type": "Доповідь", "tracks": ["Product"], "speaker": "Демчук О.А." },
+    { "title": "Roadmap в умовах невизначеності",              "type": "Доповідь", "tracks": ["Product"], "speaker": "Волошин І.Ф." },
+    { "title": "Технічний борг очима продакт-менеджера",       "type": "Доповідь", "tracks": ["Product"], "speaker": "Волошин І.Ф." },
+    { "title": "Customer journey map",                         "type": "Воркшоп",  "tracks": ["Product"], "speaker": "Волошин І.Ф.", "attendees": 30 },
+
+    { "title": "Rust для мікроконтролерів",                    "type": "Доповідь", "tracks": ["Embedded"], "speaker": "Петрів М.С." },
+    { "title": "RTOS на практиці",                             "type": "Доповідь", "tracks": ["Embedded"], "speaker": "Петрів М.С." },
+    { "title": "Оновлення прошивок по повітрю",                "type": "Доповідь", "tracks": ["Embedded"], "speaker": "Петрів М.С." },
+    { "title": "Безпека IoT-пристроїв",                        "type": "Доповідь", "tracks": ["Embedded"], "speaker": "Коцюба В.Б." },
+    { "title": "Edge AI на мікроконтролерах",                  "type": "Доповідь", "tracks": ["Embedded"], "speaker": "Коцюба В.Б." },
+    { "title": "Паяємо і програмуємо сенсор",                  "type": "Воркшоп",  "tracks": ["Embedded"], "speaker": "Коцюба В.Б.", "attendees": 20 }
+  ]
+}

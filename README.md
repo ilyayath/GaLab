@@ -1,4 +1,4 @@
-# GaLab — Genetic Algorithms (Lab 4)
+# GaLab — Genetic Algorithms (Lab 2)
 
 C# / .NET 10 console app built on [GeneticSharp](https://github.com/giacomelli/GeneticSharp) and [ScottPlot](https://scottplot.net/).
 
@@ -16,7 +16,7 @@ GaLab/
   Schedule/    data model, penalty, schedule GA, experiment
   Data/        schedule datasets (JSON)
 results/       generated tables (CSV/MD) and plots (PNG)
-Звіт_ЛР4_Генетичні_алгоритми.docx   lab report
+Звіт_ЛР2_Генетичні_алгоритми.docx   lab report
 ```
 
 ## Run
